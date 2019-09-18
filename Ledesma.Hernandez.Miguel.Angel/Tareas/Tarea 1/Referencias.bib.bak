@@ -1,0 +1,14 @@
+% Encoding: UTF-8
+
+@Book{,
+  title     = {Electrónica de potencia},
+  publisher = {Pearson ecucación},
+  year      = {2004},
+  author    = {Muhhamed H. Radish},
+  editor    = {Pearson ecucación},
+  volume    = {Tercera edición},
+  edition   = {Tercera},
+  isbn      = {970-26-0532-6},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
