@@ -1,0 +1,106 @@
+
+**** 09/12/19 02:08:45 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-489"  [ C:\USERS\joel_\Documents\Circuito 13 inversa-PSpiceFiles\SCHEMATIC1\489.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "489.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.05 0 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source CIRCUITO 13 INVERSA
+V_V1         N00126 0  
++SIN 0 311 50 0 0 0
+L_L1         N00126 N00133  4m  
+D_D1         N00133 N00137 Dbreak 
+D_D2         0 N00137 Dbreak 
+I_I1         N00137 0 DC 100A  
+
+**** RESUMING 489.cir ****
+.END
+
+**** 09/12/19 02:08:45 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-489"  [ C:\USERS\joel_\Documents\Circuito 13 inversa-PSpiceFiles\SCHEMATIC1\489.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          
+          IS   10.000000E-15 
+          RS     .1          
+         CJO  100.000000E-15 
+
+
+**** 09/12/19 02:08:45 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-489"  [ C:\USERS\joel_\Documents\Circuito 13 inversa-PSpiceFiles\SCHEMATIC1\489.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00126)    0.0000 (N00133)    0.0000 (N00137)   -5.9349 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.000E+01
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 09/12/19 02:08:45 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-489"  [ C:\USERS\joel_\Documents\Circuito 13 inversa-PSpiceFiles\SCHEMATIC1\489.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .08
+

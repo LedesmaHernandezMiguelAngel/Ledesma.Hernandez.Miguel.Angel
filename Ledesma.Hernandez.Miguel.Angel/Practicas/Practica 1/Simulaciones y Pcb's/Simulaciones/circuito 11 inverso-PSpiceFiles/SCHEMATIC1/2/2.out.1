@@ -1,0 +1,70 @@
+
+**** 09/12/19 02:36:31 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-2"  [ C:\USERS\joel_\Documents\circuito 11 inverso-PSpiceFiles\SCHEMATIC1\2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.05 0 0 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source CIRCUITO 11 INVERSO
+V_V1         N00148 N00225  
++SIN 0 311 50 0 0 0
+V_V2         N00148 N00229  
++SIN 0 311 50 0 0 120
+V_V3         N00148 N00233  
++SIN 0 311 50 0 0 -120
+L_L1         N00225 N00397  1m  
+L_L2         N00229 N00401  1m  
+L_L3         N00233 N00382  1m  
+D_D1         N00397 N00373 Dbreak 
+D_D2         N00386 N00397 Dbreak 
+D_D3         N00401 N00373 Dbreak 
+D_D4         N00386 N00401 Dbreak 
+D_D6         N00386 N00382 Dbreak 
+D_D5         N00382 N00373 Dbreak 
+I_I1         N00373 N00386 DC 50A  
+
+**** RESUMING 2.cir ****
+.END
+
+ERROR(ORPSIM-15142): Node N00148 is floating
+
+ERROR(ORPSIM-15142): Node N00225 is floating
+
+ERROR(ORPSIM-15142): Node N00229 is floating
+
+ERROR(ORPSIM-15142): Node N00233 is floating
+
+ERROR(ORPSIM-15142): Node N00397 is floating
+
+ERROR(ORPSIM-15142): Node N00401 is floating
+
+ERROR(ORPSIM-15142): Node N00382 is floating
+
+ERROR(ORPSIM-15142): Node N00373 is floating
+
+ERROR(ORPSIM-15142): Node N00386 is floating
+

@@ -1,0 +1,23 @@
+* source CIRCUITO 14
+V_V1         N00251 N00642  
++SIN 0 311 50 0 0 -120
+V_V2         N00251 N00660  
++SIN 0 311 50 0 0 0
+V_V3         N00251 N00678  
++SIN 0 311 50 0 0 120
+D_D1         N00407 N00365 Dbreak 
+D_D2         N00399 N00365 Dbreak 
+D_D3         N00374 N00365 Dbreak 
+D_D4         0 N00399 Dbreak 
+D_D5         0 N00374 Dbreak 
+D_D6         0 N00407 Dbreak 
+L_L1         N00642 N00646  0.2m  
+L_L2         N00660 N00664  0.2m  
+L_L3         N00678 N00682  0.2m  
+R_R1         N00646 N00407  1m  
+R_R2         N00664 N00399  1m  
+R_R3         N00682 N00374  1m  
+R_R4         N00855 N00848  20m  
+C_C1         0 N00855  1u  
+R_R5         0 N00848  20  
+L_L4         N00365 N00848  0.5m  

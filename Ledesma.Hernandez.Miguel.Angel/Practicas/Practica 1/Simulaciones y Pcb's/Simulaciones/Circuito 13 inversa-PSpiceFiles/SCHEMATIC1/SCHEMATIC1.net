@@ -1,0 +1,7 @@
+* source CIRCUITO 13 INVERSA
+V_V1         N00126 0  
++SIN 0 311 50 0 0 0
+L_L1         N00126 N00133  4m  
+D_D1         N00133 N00137 Dbreak 
+D_D2         0 N00137 Dbreak 
+I_I1         N00137 0 DC 100A  

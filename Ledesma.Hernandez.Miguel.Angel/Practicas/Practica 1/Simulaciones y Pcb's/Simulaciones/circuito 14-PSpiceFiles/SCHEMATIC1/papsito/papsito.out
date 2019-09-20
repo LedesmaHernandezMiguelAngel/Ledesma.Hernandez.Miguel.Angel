@@ -1,0 +1,130 @@
+
+**** 09/18/19 23:13:00 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-papsito"  [ C:\Users\joel_\OneDrive\Escritorio\Simulaciones chidas perronas\circuito 14-pspicefiles\schemati
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "papsito.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.05 0 0 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source CIRCUITO 14
+V_V1         N00251 N00642  
++SIN 0 311 50 0 0 -120
+V_V2         N00251 N00660  
++SIN 0 311 50 0 0 0
+V_V3         N00251 N00678  
++SIN 0 311 50 0 0 120
+D_D1         N00407 N00365 Dbreak 
+D_D2         N00399 N00365 Dbreak 
+D_D3         N00374 N00365 Dbreak 
+D_D4         0 N00399 Dbreak 
+D_D5         0 N00374 Dbreak 
+D_D6         0 N00407 Dbreak 
+L_L1         N00642 N00646  0.2m  
+L_L2         N00660 N00664  0.2m  
+L_L3         N00678 N00682  0.2m  
+R_R1         N00646 N00407  1m  
+R_R2         N00664 N00399  1m  
+R_R3         N00682 N00374  1m  
+R_R4         N00855 N00848  20m  
+C_C1         0 N00855  1u  
+R_R5         0 N00848  20  
+L_L4         N00365 N00848  0.5m  
+
+**** RESUMING papsito.cir ****
+.END
+
+**** 09/18/19 23:13:00 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-papsito"  [ C:\Users\joel_\OneDrive\Escritorio\Simulaciones chidas perronas\circuito 14-pspicefiles\schemati
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          
+          IS   10.000000E-15 
+          RS     .1          
+         CJO  100.000000E-15 
+
+
+**** 09/18/19 23:13:00 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-papsito"  [ C:\Users\joel_\OneDrive\Escritorio\Simulaciones chidas perronas\circuito 14-pspicefiles\schemati
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00251)  265.7300 (N00365)  531.4600 (N00374)   -3.5759 (N00399)  265.7300     
+
+(N00407)  535.0400 (N00642)  535.0700 (N00646)  535.0700 (N00660)  265.7300     
+
+(N00664)  265.7300 (N00678)   -3.6025 (N00682)   -3.6025 (N00848)  531.4600     
+
+(N00855)  531.4600 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         2.657E+01
+    V_V2         2.743E-11
+    V_V3        -2.657E+01
+
+    TOTAL POWER DISSIPATION   1.43E+04  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 09/18/19 23:13:00 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-papsito"  [ C:\Users\joel_\OneDrive\Escritorio\Simulaciones chidas perronas\circuito 14-pspicefiles\schemati
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .08
+

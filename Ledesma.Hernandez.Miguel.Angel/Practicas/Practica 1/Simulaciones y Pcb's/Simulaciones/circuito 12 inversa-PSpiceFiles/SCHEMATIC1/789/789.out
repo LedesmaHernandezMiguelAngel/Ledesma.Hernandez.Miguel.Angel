@@ -1,0 +1,108 @@
+
+**** 09/12/19 02:24:15 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-789"  [ C:\USERS\joel_\Documents\circuito 12 inversa-PSpiceFiles\SCHEMATIC1\789.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "789.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.05 0 0 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source CIRCUITO 12 INVERSA
+V_V1         N00183 N00201  
++SIN 0 311 50 0 0 0
+L_L1         N00183 N00215  6m  
+D_D1         N00215 N00194 Dbreak 
+D_D2         0 N00215 Dbreak 
+D_D3         N00201 N00194 Dbreak 
+D_D4         0 N00201 Dbreak 
+I_I1         N00194 0 DC 10A  
+
+**** RESUMING 789.cir ****
+.END
+
+**** 09/12/19 02:24:15 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-789"  [ C:\USERS\joel_\Documents\circuito 12 inversa-PSpiceFiles\SCHEMATIC1\789.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          
+          IS   10.000000E-15 
+          RS     .1          
+         CJO  100.000000E-15 
+
+
+**** 09/12/19 02:24:15 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-789"  [ C:\USERS\joel_\Documents\circuito 12 inversa-PSpiceFiles\SCHEMATIC1\789.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00183)   -1.3754 (N00194)   -2.7508 (N00201)   -1.3754 (N00215)   -1.3754 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -3.553E-15
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 09/12/19 02:24:15 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-789"  [ C:\USERS\joel_\Documents\circuito 12 inversa-PSpiceFiles\SCHEMATIC1\789.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .09
+

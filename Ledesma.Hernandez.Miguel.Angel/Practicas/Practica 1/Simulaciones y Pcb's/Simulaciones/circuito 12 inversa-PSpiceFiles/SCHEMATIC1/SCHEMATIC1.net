@@ -1,0 +1,9 @@
+* source CIRCUITO 12 INVERSA
+V_V1         N00183 N00201  
++SIN 0 311 50 0 0 0
+L_L1         N00183 N00215  6m  
+D_D1         N00215 N00194 Dbreak 
+D_D2         0 N00215 Dbreak 
+D_D3         N00201 N00194 Dbreak 
+D_D4         0 N00201 Dbreak 
+I_I1         N00194 0 DC 10A  
