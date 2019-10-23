@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<rdf:RDF
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:bibo="http://purl.org/ontology/biblio/"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:dcterms="http://purl.org/dc/terms/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+>
+
+<bibo:Article rdf:about="">
+
+    <dc:title>PWM</dc:title>
+    <dc:date>2017</dc:date>
+    <dcterms:isPartOf><bibo:Journal><dc:title>https://www.youtube.com/watch&#63;v=GnlmVMHA&#95;wQ</dc:title></bibo:Journal></dcterms:isPartOf>
+
+
+
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="electroingenieril"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Article>
+<bibo:Document rdf:about="">
+
+    <dc:title>Motores de corriente continua</dc:title>
+    <dc:date>2014</dc:date>
+
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Jos&#233; Rold&#225;n"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Document>
+</rdf:RDF>
