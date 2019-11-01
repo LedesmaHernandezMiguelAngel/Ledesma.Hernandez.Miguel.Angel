@@ -1,0 +1,138 @@
+\documentclass[letterpaper]{article}
+\usepackage{underscore}
+\usepackage[left=2.0cm, right=2.0cm, top=1.0cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage[spanish]{babel}
+\usepackage{lipsum}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{csquotes}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+\title{EV\_1\_3\_circuitos\_de\_control\_de\_voltaje\_y\_corriente\_con\_tiristores}
+\author{Ledesma Hernández Miguel Ángel \\ \&\& \\ Alcantar Días Joel Alejandro}
+\date{28/10/2019}
+
+\begin{document}
+\begin{figure}[t]
+    \includegraphics[width=6cm]{img/logo.png}
+\end{figure}
+\vspace{2cm}
+\maketitle
+\vspace{12cm}
+\begin{center}
+   Universidad politécnica de la zona metropolitana de Guadalajara.\\
+Sistemas electrónicos de interfaz.\\
+4-A Mecatrónica.\\ 
+\end{center}
+\newpage
+
+\begin{LARGE}
+\textbf{Objetivo:}\\
+\end{LARGE}
+
+Crear un sistema que regule el voltaje y corriente usando tiristores principalmente, demostrado por la intensidad de luz de un foco\\
+
+
+\begin{LARGE}
+\textbf{Materiales:}\\
+\end{LARGE}
+
+\begin{table}[htbp]
+\begin{tabular}{|l|l|}
+\hline
+{\color[HTML]{3166FF} \textbf{Equipo}} & {\color[HTML]{CB0000} \textbf{Componentes}} \\ \hline
+Multímetro                             & Potenciometro 500K$\Omega$                  \\ \hline
+Protoboard                             & Resistencias varias                         \\ \hline
+Foco/clavija/switch                    & Cables/caimanes                             \\ \hline
+                                       & Diac DB3                                    \\ \hline
+                                       & Triac BT138                                 \\ \hline
+                                       & Condensador cerámico                         \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{LARGE}
+\textbf{Procedimiento:}\\
+\end{LARGE}
+
+%Super Proceso 
+\begin{itemize}
+    \item \textbf{1.- Se arma el circuito}
+    \begin{itemize}
+        \item Colocar el potenciometro cómo referencia para los demás componentes 
+        \item De la pata media poner una resistencia de 10K$\Omega$ [café, negro,naranja] que irá a positivo
+        \item Conectar el condensador cerámico a alguna de las patas restantes y este a su vez conectado al negativo
+        \item Conectar Diac[DB3] a la pata seleccionada del potenciometro y el condensador cerámico 
+        \item Conectar el otro extremo del DB3 a una resistencia de 100$\Omega$ [café, negro, café]
+        \item Conectar el triac según su datasheet[en este caso la siguiente], la resistencia debe ser conectada al "gate" o "gatillo" del triac.
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[width=15cm]{img/triacdatasheet.PNG}
+            \caption{Datasheet Triac[BT138]}
+            \label{fig:my_label}
+        \end{figure}
+        \item Conectar Terminal1[T1] de el triac a neutro
+        \item Conectar Terminal2[T2] dos a fase 
+        \item Identificar conexiones en el tomacorriente
+            \begin{itemize}
+                \item Poner multímetro para voltaje en alterna
+                \item introducir una punta del multímetro en el tomacorriente
+                \item tocar una tierra física con la otra punta (puede ser el tornillo que une la caja con la pared)
+                Si el multimetro muestra lectura de al rededor de 120v, dependiendo del pais, se esta tomando la lectura de fase, si por el contrario el multimetro no muestra lectura, hay 0v, se esta tomando lectura de neutro.
+            \end{itemize}
+        \item Conectar nuestro circuito del socket, el foco en serie con fase y el triac como se muetra en la figura 2
+        \newpage
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[scale=0.5]{img/arturo.png}
+            \caption{Circuito regulador de intensidad}
+            \label{fig:cirlamp}
+        \end{figure}
+        \item Probar que todo funcione correctametne
+    \end{itemize}
+    \item Una vez funcione como debe. Tomar las medidas de resistencia en el potenciometro de cada estado.\\
+\end{itemize}
+
+\begin{LARGE}
+\textbf{Resultados:}\\
+\end{LARGE}
+\begin{large}
+    Se consigue regular la intensidad del foco utilizando el potenciometro; mostrando 4 estados de intensidad lumínica: Apagado, intensidad 1, intensidad 2 y máxima potencia. Se analiza cómo funciona el triac en conjunto con el diac, para intencificar o reducir su fuerza lumínica.\\
+    Ya con el potenciometro se facilito el poner resistencias al circuito y se pudo cambiar exitosamente al diseño original.\\
+\end{large}
+
+
+
+
+   
+    
+
+\begin{LARGE}
+\textbf{Conclusión:}\\
+\end{LARGE}
+\begin{large}
+    El diac tiene un voltaje de activacion que le permite conducir la corriente a traves de el, y permitir la activacion del triac, en el caso de este diac son 30v.\\
+    En este circuito el capacitor tiene una funcion muy importante que es almacenar el pulso requerido para que el diac conduca y el triac se active, es por eso que el capacitor es de baja capacitancia, para no modificar la señal de ninguna manera.\\
+    Este circuito es util en la industria para la regulacion de las faces de una revolvedora, controlar intesidad de luz el algunos tratamientos haciendole los respectivos cambios.\\
+\end{large}
+
+
+
+
+
+\begin{LARGE}
+\textbf{Bibliografía:}\\
+\end{LARGE}
+
+
+
+
+
+
+
+
+\end{document}
